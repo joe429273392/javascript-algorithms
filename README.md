@@ -10,7 +10,9 @@ Each algorithm and data structure have its own separate README
 with related explanations and links for further reading and YouTube
 videos.
 
-_Read this in other languages:_ [简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
+_Read this in other languages:_ 
+[简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md),
+[繁體中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-TW.md)
 
 ## Data Structures
 
@@ -68,6 +70,7 @@ a set of rules that precisely defines a sequence of operations.
   * [Rabin Karp Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/rabin-karp) - substring search
   * [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
 * **Search**
+  * [Linear Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/linear-search)
   * [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
 * **Sorting**
   * [Bubble Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/bubble-sort)
@@ -75,8 +78,10 @@ a set of rules that precisely defines a sequence of operations.
   * [Insertion Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/insertion-sort)
   * [Heap Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/heap-sort)
   * [Merge Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/merge-sort)
-  * [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort)
+  * [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort) - in-place and non-in-place implementations
   * [Shellsort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/shell-sort)
+  * [Counting Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/counting-sort)
+  * [Radix Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/radix-sort)
 * **Tree**  
   * [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
   * [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/breadth-first-search) (BFS)
@@ -213,12 +218,14 @@ Below is the list of some of the most used Big O notations and their performance
 
 ### Array Sorting Algorithms Complexity
 
-| Name                  | Best      | Average   | Worst         | Memory    | Stable    |
-| --------------------- | :-------: | :-------: | :-----------: | :-------: | :-------: |
-| **Bubble sort**       | n         | n^2       | n^2           | 1         | Yes       |
-| **Insertion sort**    | n         | n^2       | n^2           | 1         | Yes       |
-| **Selection sort**    | n^2       | n^2       | n^2           | 1         | No        |
-| **Heap sort**         | n log(n)  | n log(n)  | n log(n)      | 1         | No        |
-| **Merge sort**        | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
-| **Quick sort**        | n log(n)  | n log(n)  | n^2           | log(n)    | No        |
-| **Shell sort**        | n log(n)  | depends on gap sequence   | n (log(n))^2  | 1         | No        |
+| Name                  | Best      | Average   | Worst         | Memory    | Stable    | Comments  |
+| --------------------- | :-------: | :-------: | :-----------: | :-------: | :-------: | :-------- |
+| **Bubble sort**       | n         | n^2       | n^2           | 1         | Yes       |           |
+| **Insertion sort**    | n         | n^2       | n^2           | 1         | Yes       |           |
+| **Selection sort**    | n^2       | n^2       | n^2           | 1         | No        |           |
+| **Heap sort**         | n log(n)  | n log(n)  | n log(n)      | 1         | No        |           |
+| **Merge sort**        | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |           |
+| **Quick sort**        | n log(n)  | n log(n)  | n^2           | log(n)    | No        |           |
+| **Shell sort**        | n log(n)  | depends on gap sequence   | n (log(n))^2  | 1         | No        |           |
+| **Counting sort**     | n + r     | n + r     | n + r         | n + r     | Yes       | r - biggest number in array |
+| **Radix sort**        | n * k     | n * k     | n * k         | n + k    | Yes        | k - length of longest key |
